@@ -1,0 +1,13 @@
+language: ruby
+before_install:
+  - sudo wget https://github.com/jgm/pandoc/releases/download/1.15.1/pandoc-1.15.1-1-amd64.deb
+  - sudo dpkg -i pandoc-1.15.1-1-amd64.deb
+  - gem install asciidoctor
+  - gem install jekyll-toc
+#  - npm install --global pdfify-node
+before_script:
+  - script/generate-manual github_for_developers.md
+  - script/push
+env:
+  global:
+    secure: jhl0BaLC4gfQ8If0NO9L4oeUyNs37rYif0UU0urXsWdjJhOX9LTXPYbEH/gWllx00PCUTFvTvyjWMDwHIAb9N34OSHyxYViMi4+GJ7Y9JHNxo2THOt/rFUDIvBIg8fJJtDpZuJBga2Fptf98rifFImotA9dAcWiOWPqm4O1f5fFlu/Mec/HdD60jMnfdsa8QxRJLfiSRb5HL2JoZFBLflUH/Z4rlToGOh3pHS8Tcf+y9WHm5lqEug0A+FQzMA/L9YJ91I/fLiL6+MTrE4Op6hENsViT0RvK51F1FqQzWtXVnAmhsiSKToVp+V7svB376ubnuGJK4k/V26cH86osIGX7K/9OBv9Rl6RcLGR/7wpOHgq9C0biVTLfdTgkTdLOq/0Ykm8Me4uP4SIj2JRgUy3OQOdIZ24y0t723cLwJSxgLiVKmhZBJhqb5X5FnS9NLiOUdJ20X3pZBO3OkzEXa+zY7l1rRGhP3hcta1RyammIx7hOFK1AQMDXbHpTeKnvjx6uEKrA0KcWwpb85GJb/HQ8EZSn3USrvWYH7jA2S4E5fpk4tLDH/BosbLA/NBNzcCV+Nsp+LQeB7ptMik+A1iGGMSbeMHqkJuXjot3wjRMs1VpdKms1AMGd2T6bbrj9UmsyyT+2uL4Mz0XZJ6NPNtMAog0O/wXkIJKUtrx+Mh2k=

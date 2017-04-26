@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# script/setup: produce manuals for all classes
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+script/bootstrap
+
+#file="github_for_developers.md"
+
+for file in github_for_developers.md; do
+  eval script/generate-manual $file 2>/dev/null || true
+done
+
+echo "==> All manuals created!"

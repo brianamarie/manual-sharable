@@ -16,7 +16,7 @@
 title: GitHub Training Manual
 email: services@github.com
 description: The official manual for the GitHub Training team.
-baseurl: "/training-manual" # the subpath of your site, e.g. /blog
+baseurl: "/manual-sharable" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: githubtraining
 github_username:  github
